@@ -1,0 +1,40 @@
+{
+  "name": "@daliusd/langd",
+  "version": "0.1",
+  "description": "language string collector, as a daemon",
+  "bin": {
+    "langd": "./bin/langd"
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "start": "node bin/langd start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daliusd/langd.git"
+  },
+  "author": "Dalius Dobravolskas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daliusd/langd/issues"
+  },
+  "homepage": "https://github.com/daliusd/langd",
+  "devDependencies": {
+    "@types/node": "^18.15.10",
+    "typescript": "^5.0.2",
+    "prettier": "^2.8.7"
+  },
+  "dependencies": {
+    "core_d": "^5.0.1"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "optionalDependencies": {
+    "@babel/parser": "^7.21.3",
+    "@typescript-eslint/typescript-estree": "^5.56.0"
+  }
+}
