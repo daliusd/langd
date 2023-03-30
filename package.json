@@ -21,20 +21,17 @@
   "homepage": "https://github.com/daliusd/langd",
   "devDependencies": {
     "@types/node": "^18.15.10",
-    "typescript": "^5.0.2",
-    "prettier": "^2.8.7"
+    "prettier": "^2.8.7",
+    "typescript": "^5.0.2"
   },
   "dependencies": {
-    "core_d": "^5.0.1"
+    "core_d": "^5.0.1",
+    "nanolru": "^1.0.0"
   },
   "files": [
     "bin",
     "dist",
     "LICENSE",
     "README.md"
-  ],
-  "optionalDependencies": {
-    "@babel/parser": "^7.21.3",
-    "@typescript-eslint/typescript-estree": "^5.56.0"
-  }
+  ]
 }

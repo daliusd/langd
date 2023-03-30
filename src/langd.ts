@@ -8,16 +8,12 @@ import { displayHelp } from './args';
 const readFile = promisify(fs.readFile);
 const validCommands = ['restart', 'start', 'status', 'stop'];
 
-type Action =
-  | 'PRINT_VERSION'
-  | 'INVOKE_CORE_D'
-  | 'PRINT_HELP'
-  | 'PRINT_DEBUG_INFO'
-  | 'FLUSH_CACHE';
+type Action = 'PRINT_VERSION' | 'INVOKE_CORE_D' | 'PRINT_HELP';
 
 function processArgs(args: string[]): [Action, string] {
   const flagsToAction: { [flag: string]: Action | undefined } = {
     '--version': 'PRINT_VERSION',
+    '-v': 'PRINT_VERSION',
     '--help': 'PRINT_HELP',
     '-h': 'PRINT_HELP',
   };
@@ -48,7 +44,7 @@ async function main(args: string[]): Promise<void> {
 
   process.env.CORE_D_TITLE = title;
   process.env.CORE_D_SERVICE = require.resolve('./service');
-  process.env.CORE_D_DOTFILE = `.${title}@${encodeURIComponent(process.cwd())}`;
+  process.env.CORE_D_DOTFILE = `.${title}`;
 
   const core_d = require('core_d');
 
@@ -57,10 +53,9 @@ async function main(args: string[]): Promise<void> {
     return;
   }
 
-  core_d.invoke(
-    { args },
-    await readFile(process.stdin.fd, { encoding: 'utf-8' }),
-  );
+  const text = await readFile(process.stdin.fd, { encoding: 'utf-8' });
+
+  core_d.invoke({ args }, text);
 }
 
 main(process.argv.slice(2)).catch((err) => {
