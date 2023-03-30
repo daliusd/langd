@@ -1,6 +1,6 @@
 {
   "name": "@daliusd/langd",
-  "version": "0.1",
+  "version": "0.1.1",
   "description": "language string collector, as a daemon",
   "bin": {
     "langd": "./bin/langd"
