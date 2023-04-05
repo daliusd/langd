@@ -24,6 +24,37 @@ the optional positional parameter with the root folder:
 $ cat file.ts | langd /path/to/root
 ```
 
+## How it works
+
+When you run `langd` then it searches for `messages_en.json` files
+in specified root and loads content of `messages_en.json` to
+memory. Next time you run `langd` it will get results from memory.
+
+If you add new `messages_en.json` files under your root `langd`
+will search them again in 5 minutes. If you need to do it faster
+then restart `langd` using `langd restart`.
+
+Files are cached for 60 minutes but they will be reloaded on
+modification. If you want to see what files are currently loaded
+in memory run `langd status`:
+
+```bash
+
+❯ langd status
+Running.
+
+Paths cached by root
+--------------------
+
+Root: /home/daliusd/projects/em/packages/fun-react
+
+        - No cached files
+
+Root: /home/daliusd/projects/em/packages/fun-picker
+
+        - /home/daliusd/projects/em/packages/fun-picker/src/assets/locales/messages_en.json
+```
+
 ## Editor integration
 
 Here is how it can be integrated with
