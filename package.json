@@ -22,7 +22,7 @@
   "devDependencies": {
     "@types/node": "^18.15.10",
     "prettier": "^2.8.7",
-    "typescript": "^5.0.3"
+    "typescript": "^5.0.4"
   },
   "dependencies": {
     "core_d": "^5.0.1",
