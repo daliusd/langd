@@ -21,7 +21,7 @@
   "homepage": "https://github.com/daliusd/langd",
   "devDependencies": {
     "@types/node": "^20.5.9",
-    "prettier": "^3.0.2",
+    "prettier": "^3.0.3",
     "typescript": "^5.2.2"
   },
   "dependencies": {
