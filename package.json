@@ -25,7 +25,7 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "core_d": "^6.0.0",
+    "core_d": "^6.1.0",
     "nanolru": "^1.0.0"
   },
   "files": [
