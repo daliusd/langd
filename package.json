@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/daliusd/langd",
   "devDependencies": {
-    "@types/node": "^24.1.0",
+    "@types/node": "^24.2.1",
     "prettier": "^3.6.2",
     "typescript": "^5.9.2"
   },
