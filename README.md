@@ -1,5 +1,7 @@
 # langd
 
+> **⚠️ DEPRECATED**: This project is no longer maintained. Please use [lang-lsp](https://github.com/daliusd/lang-lsp/) instead, which provides a modern Language Server Protocol implementation with better features and editor support.
+
 Wanna collect language strings fast? Welcome to langd!
 
 This is built on top of [core_d.js](https://github.com/mantoni/core_d.js).
